@@ -1,5 +1,7 @@
 %{"cowboy": {:package, "1.0.0"},
   "cowlib": {:package, "1.0.0"},
+  "earmark": {:git, "git://github.com/pragdave/earmark.git", "e3fe1a8a53252026c0377e517bf9113257318635", []},
+  "ex_doc": {:git, "git://github.com/elixir-lang/ex_doc.git", "789de6b49ca5dde4bff3850e6fd6dfd371edd94d", []},
   "linguist": {:package, "0.1.2"},
   "phoenix": {:package, "0.4.1"},
   "plug": {:package, "0.7.0"},

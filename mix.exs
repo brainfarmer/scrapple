@@ -25,7 +25,8 @@ defmodule Scrapple.Mixfile do
   defp deps do
     [
       {:phoenix, "0.4.1"},
-      {:cowboy, "~> 1.0.0"}
+      {:cowboy, "~> 1.0.0"},
+      {:earmark, github: "pragdave/earmark"}
     ]
   end
 end
