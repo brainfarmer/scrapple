@@ -3,6 +3,11 @@ defmodule Markdown.RenderedDocument do
 end
 
 defmodule Markdown.Renderer do
+  def render(path) do
+    {:ok, string} = File.read(path)
+    string |> render_string
+  end
+
   def render_string(string) do
     body = string |> Earmark.to_html
     %Markdown.RenderedDocument{ body: body, title: title_for(body) }
