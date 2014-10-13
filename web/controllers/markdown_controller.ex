@@ -2,9 +2,15 @@ defmodule Scrapple.MarkdownController do
   use Phoenix.Controller
   alias Markdown.Renderer
 
-  def show(conn, _params) do
-    document = Renderer.render_string("# Thiggy Jones\n\n![thiggy](https://avatars0.githubusercontent.com/u/7998116?v=2&s=460)")
+  def show(conn, params) do
+    document = params
+      |> requested_file
+      |> Renderer.render
     html(conn, html_for(document))
+  end
+
+  defp requested_file(params) do
+    "./test/resources/md_files/#{params["page"]}"
   end
 
   defp html_for(rendered_document) do

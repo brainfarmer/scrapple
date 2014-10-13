@@ -4,7 +4,8 @@ end
 
 defmodule Markdown.Renderer do
   def render(path) do
-    {:ok, string} = File.read(path)
+    file = path <> ".md"
+    {:ok, string} = File.read(file)
     string |> render_string
   end
 

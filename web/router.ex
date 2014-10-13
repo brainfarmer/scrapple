@@ -2,6 +2,6 @@ defmodule Scrapple.Router do
   use Phoenix.Router
 
   get "/", Scrapple.PageController, :index, as: :pages
-  get "/markdown/:md", Scrapple.MarkdownController, :show
+  get "/markdown/:page", Scrapple.MarkdownController, :show
 
 end

@@ -2,7 +2,7 @@ defmodule MarkdownTest do
   use ExUnit.Case
 
   test "render markdown from filesystem" do
-    html_doc = Markdown.Renderer.render("./test/resources/md_files/simple.md")
+    html_doc = Markdown.Renderer.render("./test/resources/md_files/simple")
     expected_body = "<p>Simple markdown.</p>\n"
     expected_title = "Untitled Document"
     assert %Markdown.RenderedDocument{ title: expected_title, body: expected_body } == html_doc
