@@ -22,8 +22,9 @@ defmodule MarkdownTest do
     assert %Markdown.RenderedDocument{ title: expected_title, body: expected_body } == html_doc
   end
 
-  test "file not found throws 404 error" do
-    conn = Markdown.Renderer.render("./text/resources/md_files/foobarbaz")
-    assert conn.status == 404
+  test "file not found shows 404 error" do
+    html_doc = Markdown.Renderer.render("./test/resources/md_files/foobarbaz")
+    assert html_doc == {:error, :enoent}
   end
+
 end

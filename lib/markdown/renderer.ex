@@ -5,8 +5,10 @@ end
 defmodule Markdown.Renderer do
   def render(path) do
     file = path <> ".md"
-    {:ok, string} = File.read(file)
-    string |> render_string
+    case File.read(file) do
+      {:ok, string} -> string |> render_string
+      {:error, :enoent} -> {:error, :enoent}  # return the error
+    end
   end
 
   def render_string(string) do
