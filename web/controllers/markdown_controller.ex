@@ -32,7 +32,14 @@ defmodule Scrapple.MarkdownController do
   end
 
   defp error_file_not_found(conn) do
-    text conn, 404, "Sorry, we couldn't find the file you specified"
+    document = """
+    # Not Found
+
+    ![wtf](http://static.giantbomb.com/uploads/original/1/10099/516535-87665dude_wtf_posters1z.jpg)
+
+    (Sorry, we couldn't find the file you specified)
+    """ |> Renderer.render_string
+    html(conn, 404, html_for(document))
   end
 
 end
