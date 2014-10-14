@@ -1,5 +1,5 @@
 defmodule MarkdownTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
 
   test "render markdown from filesystem" do
     html_doc = Markdown.Renderer.render("./test/resources/md_files/simple")
@@ -20,5 +20,10 @@ defmodule MarkdownTest do
     expected_body = "<h1>This is a title</h1>\n<p>This doc has a title.</p>\n"
     expected_title = "This is a title"
     assert %Markdown.RenderedDocument{ title: expected_title, body: expected_body } == html_doc
+  end
+
+  test "file not found throws 404 error" do
+    conn = Markdown.Renderer.render("./text/resources/md_files/foobarbaz")
+    assert conn.status == 404
   end
 end

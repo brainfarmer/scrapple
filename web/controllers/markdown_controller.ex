@@ -25,5 +25,15 @@ defmodule Scrapple.MarkdownController do
     </html>
     """
   end
+
+  # Override call/2 to trap file not found errors
+  def call(conn, opts) do
+    try do
+      super(conn, opts)
+    rescue
+      #e -> conn |> put_status(404) |> render "user_404"
+      :error -> call(Router, :get, "/404")
+    end
+  end
 end
 
