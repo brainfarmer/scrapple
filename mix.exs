@@ -26,7 +26,8 @@ defmodule Scrapple.Mixfile do
     [
       {:phoenix, "0.4.1"},
       {:cowboy, "~> 1.0.0"},
-      {:earmark, github: "pragdave/earmark"}
+      {:earmark, github: "pragdave/earmark"},
+      {:hackney, github: "benoitc/hackney"}
     ]
   end
 end

@@ -7,7 +7,7 @@ defmodule Scrapple.MarkdownController do
      |> requested_file
      |> Renderer.render
     case document do
-      {:error, _} -> 
+      {:error, _} ->
         error_file_not_found(conn)
       _ ->
         html(conn, html_for(document))
