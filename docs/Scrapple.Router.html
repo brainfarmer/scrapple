@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scrapple.Router</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+
+    <div id="content">
+      <div class="breadcrumbs">scrapple v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Scrapple.html">Scrapple</a> &rarr; <a href="Scrapple.Router.html">Router</a></div>
+
+      <h1>
+        Scrapple.Router
+        
+      </h1>
+
+      <ul class="summary_links">
+        
+          <li><a href="#summary">Summary</a></li>
+        
+        
+          <li><a href="#functions_details">Functions</a></li>
+        
+        
+        
+        
+      </ul>
+
+      
+
+      
+
+      
+        <h2 id="summary">Summary<div class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></div></h2>
+        <table class="summary">
+          <tr>
+  <td class="summary_signature"><a href="#call/2">call(conn, opts)</a></td>
+  
+    <td class="summary_synopsis"><p>Callback implementation of <code class="inline">Plug.call/2</code></p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#dispatch/2">dispatch(conn, list2)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#docs_path/2">docs_path(atom1, doc)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#docs_path/3">docs_path(atom1, doc, params)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#home_path/1">home_path(atom1)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#home_path/2">home_path(atom1, params)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#init/1">init(opts)</a></td>
+  
+    <td class="summary_synopsis"><p>Callback implementation of <code class="inline">Plug.init/1</code></p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#match/3">match(conn, method, path)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#page_path/3">page_path(atom1, doc, path)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#page_path/4">page_path(atom1, doc, path, params)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#start/0">start()</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#stop/0">stop()</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#url/1">url(path)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#url/2">url(conn, path)</a></td>
+  
+</tr>
+
+        </table>
+      
+
+      
+
+      
+        <div id="functions_details" class="details_list">
+          <h2>Functions</h2>
+          <div class="detail">
+  <div class="detail_header" id="call/2">
+    <span class="signature"><strong>call(conn, opts)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#call/2" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"><p>Callback implementation of <code class="inline">Plug.call/2</code>.</p>
+</div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="dispatch/2">
+    <span class="signature"><strong>dispatch(conn, list2)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#dispatch/2" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="docs_path/2">
+    <span class="signature"><strong>docs_path(atom1, doc)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#docs_path/2" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="docs_path/3">
+    <span class="signature"><strong>docs_path(atom1, doc, params)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#docs_path/3" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="home_path/1">
+    <span class="signature"><strong>home_path(atom1)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#home_path/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="home_path/2">
+    <span class="signature"><strong>home_path(atom1, params)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#home_path/2" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="init/1">
+    <span class="signature"><strong>init(opts)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#init/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"><p>Callback implementation of <code class="inline">Plug.init/1</code>.</p>
+</div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="match/3">
+    <span class="signature"><strong>match(conn, method, path)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#match/3" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="page_path/3">
+    <span class="signature"><strong>page_path(atom1, doc, path)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#page_path/3" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="page_path/4">
+    <span class="signature"><strong>page_path(atom1, doc, path, params)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#page_path/4" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="start/0">
+    <span class="signature"><strong>start()</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#start/0" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="stop/0">
+    <span class="signature"><strong>stop()</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#stop/0" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="url/1">
+    <span class="signature"><strong>url(path)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#url/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="url/2">
+    <span class="signature"><strong>url(conn, path)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#url/2" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+
+        </div>
+      
+
+      
+
+      
+    </div>
+  </body>
+</html>

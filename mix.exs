@@ -27,7 +27,8 @@ defmodule Scrapple.Mixfile do
       {:phoenix, "0.4.1"},
       {:cowboy, "~> 1.0.0"},
       {:earmark, github: "pragdave/earmark"},
-      {:hackney, github: "benoitc/hackney"}
+      {:hackney, github: "benoitc/hackney"},
+      {:ex_doc,  github: "elixir-lang/ex_doc"}
     ]
   end
 end
