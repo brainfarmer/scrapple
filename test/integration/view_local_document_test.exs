@@ -17,7 +17,8 @@ defmodule Integration.ViewLocalDocuments do
   end
 
   test "index doesn't exist" do
-    flunk "No test implemented yet"
+    conn = call(Router, :get, "/docs/no_index_doc")
+    assert conn.status == 404
   end
 
   # Folow local hyperlinks
