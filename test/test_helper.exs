@@ -1,3 +1,5 @@
+Code.require_file("conn_helper.exs", __DIR__)
+
 Phoenix.CodeReloader.reload!
 ExUnit.start
 
@@ -25,7 +27,7 @@ end
 defmodule IntegrationTest.Case do
   defmacro __using__(_options) do
     quote do
-      use ExUnit.Case
+      use ExUnit.Case, async: true
       import TestServer
       import IntegrationTest.Case.Helpers
     end
