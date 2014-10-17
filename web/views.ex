@@ -8,6 +8,7 @@ defmodule Scrapple.Views do
       # This block is expanded within all views for aliases, imports, etc
       import Scrapple.I18n
       import Scrapple.Router.Helpers
+      alias Phoenix.Controller.Flash
     end
   end
 
