@@ -1,23 +1,20 @@
 use Mix.Config
 
-# NOTE: To get SSL working, you will need to set:
+# ## SSL Support
 #
-#     ssl: true,
-#     keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
-#     certfile: System.get_env("SOME_APP_SSL_CERT_PATH"),
+# To get SSL working, you will need to set:
 #
-# Where those two env variables point to a file on disk
-# for the key and cert
+#     https: [port: 443,
+#             keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
+#             certfile: System.get_env("SOME_APP_SSL_CERT_PATH")]
+#
+# Where those two env variables point to a file on
+# disk for the key and cert.
 
 config :phoenix, Scrapple.Router,
-  port: System.get_env("PORT"),
-  ssl: false,
-  host: "example.com",
-  cookies: true,
-  session_key: "_scrapple_key",
-  session_secret: "+KB61J*U)B^218D8L8^52DG0Q7$5F#8*@B7C!V#RTPH99180KL0Z6XQMUHH!VD&3=SL2^WBZ7"
+  url: [host: "example.com"],
+  http: [port: System.get_env("PORT")],
+  secret_key_base: "g70Jkz+NmWus9G8/Rco/jKpDx/5JPnIi3BofZ2xNQ5cHkEgoKmh2w9fw7RFbwPYNHeeHQKWgODLHSvyaGFRVNw=="
 
 config :logger, :console,
-  level: :info,
-  metadata: [:request_id]
-
+  level: :info

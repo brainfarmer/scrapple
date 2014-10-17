@@ -1,6 +1,7 @@
 defmodule Scrapple.MarkdownController do
   use Phoenix.Controller
   alias Markdown.Renderer
+  plug :action
 
   def show(conn, params) do
     document = params

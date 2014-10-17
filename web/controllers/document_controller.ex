@@ -1,4 +1,8 @@
 defmodule Scrapple.DocumentController do
+  use Phoenix.Controller
+  alias Markdown.Renderer
+  plug :action
+
   @moduledoc """
   **DocumentController** handles serving structured markdown documents.
 
@@ -15,9 +19,6 @@ defmodule Scrapple.DocumentController do
   - relative link decoration
 
   """
-
-  use Phoenix.Controller
-  alias Markdown.Renderer
 
   @doc """
   **index** will render the `indexFile` of a given document directory;

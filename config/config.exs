@@ -6,19 +6,19 @@ use Mix.Config
 # file won't be loaded nor affect the parent project.
 
 config :phoenix, Scrapple.Router,
-  port: System.get_env("PORT"),
-  ssl: false,
-  static_assets: true,
-  cookies: true,
-  session_key: "_scrapple_key",
-  session_secret: "+KB61J*U)B^218D8L8^52DG0Q7$5F#8*@B7C!V#RTPH99180KL0Z6XQMUHH!VD&3=SL2^WBZ7",
+  url: [host: "localhost"],
+  http: [port: System.get_env("PORT")],
+  https: false,
+  secret_key_base: "g70Jkz+NmWus9G8/Rco/jKpDx/5JPnIi3BofZ2xNQ5cHkEgoKmh2w9fw7RFbwPYNHeeHQKWgODLHSvyaGFRVNw==",
   catch_errors: true,
   debug_errors: false,
   error_controller: Scrapple.PageController
 
-config :phoenix, :code_reloader,
-  enabled: false
+config :phoenix, Scrapple.Router,
+  session: [store: :cookie,
+            key: "_scrapple_key"]
 
+# Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]

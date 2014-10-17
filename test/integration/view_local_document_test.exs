@@ -3,12 +3,6 @@ defmodule Integration.ViewLocalDocuments do
   use IntegrationTest.Case
   alias Scrapple.Router
 
-  setup_all do
-    Application.put_env(:phoenix, Router, http: false, https: false)
-    Router.start()
-    on_exit &Router.stop/0
-  end
-
   # View Document Index
   test "view document index when index exists" do
     conn = call(Router, :get, "/docs/sampledoc")
@@ -21,5 +15,5 @@ defmodule Integration.ViewLocalDocuments do
     assert conn.status == 404
   end
 
-  # Folow local hyperlinks
+  # Follow local hyperlinks
 end
