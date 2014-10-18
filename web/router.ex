@@ -12,7 +12,7 @@ defmodule Scrapple.Router do
     # May want our own custom stack here
     pipe_through :browser
 
-    get "/docs/:doc", Scrapple.DocumentController, :index, as: :docs
-    get "/docs/:doc/*path", Scrapple.DocumentController, :show, as: :page
+    get "/:doc", Scrapple.DocumentController, :index, as: :docs
+    get "/:doc/*path", Scrapple.DocumentController, :show, as: :page
   end
 end
