@@ -16,15 +16,18 @@ defmodule Integration.ViewLocalDocuments do
   end
 
   # Follow local hyperlinks
+  @tag :pending
   test "follow local hyperlinks - relative path" do
-    IO.puts "pending - relative path"
+    IO.puts "PENDING: follow local hyperlinks - relative path"
   end
 
+  @tag :pending
   test "follow local hyperlinks - quoted path" do
-    IO.puts "pending - quoted path"
+    IO.puts "PENDING: follow local hyperlinks - quoted path"
   end
 
+  @tag :pending
   test "follow local hyperlinks - non-existent path" do
-    IO.puts "pending - non-existent path"
+    IO.puts "PENDING: follow local hyperlinks - non-existent path"
   end
 end
